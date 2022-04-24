@@ -1,0 +1,5 @@
+.tabel {
+    font-family: -apple-system, "Trebuchet MS", Helvetica, sans-serif;
+    justify-content: center;
+    background: linear-gradient(215deg, rgba(232,255,2,1) 0%, rgba(255,97,97,1) 0%, rgba(93,255,213,1) 60%);
+}

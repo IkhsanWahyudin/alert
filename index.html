@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/css">
+	<title>Tugas Alert</title>
+</head>
+<div class="tabel">
+<body>
+    <center>
+	<h2>Data Peserta</h2>
+    <br>
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">No.</th>
+				<th scope="col">Nama</th>
+				<th scope="col">Jenis Kelamin</th>
+				<th scope="col">Umur</th>
+				<th scope="col">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th scope="row">1</th>
+				<td>Didit</td>
+				<td>Pria</td>
+				<td>21</td>
+				<td>
+					<a class="btn btn-danger" onclick="showAlert()">Delete?</a>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">2</th>
+				<td>Vino</td>
+				<td>Pria</td>
+				<td>20</td>
+				<td>
+					<a class="btn btn-danger" onclick="showAlert()">Delete?</a>
+				</td>
+			</tr>
+            <tr>
+				<th scope="row">3</th>
+				<td>Aisyah</td>
+				<td>Wanita</td>
+				<td>19</td>
+				<td>
+					<a class="btn btn-danger" onclick="showAlert()">Delete?</a>
+				</td>
+			</tr>
+            <tr>
+				<th scope="row">4</th>
+				<td>Ikhsan</td>
+				<td>Pria</td>
+				<td>19</td>
+				<td>
+					<a class="btn btn-danger" onclick="showAlert()">Delete?</a>
+				</td>
+			</tr>
+	</tbody>
+</table>
+
+<script>
+	function showAlert() {
+		swal({
+			title: "Anda Yakin?",
+			text: "Kalau Terhapus, Datamu Tidak Bisa Dikembalikan Lagi!!!",
+			icon: "warning",
+			buttons: true,
+			dangerMode: true,
+		})
+		.then((willDelete) => {
+			if (willDelete) {
+				swal("Data Telah Terhapus", {
+					icon: "success",
+				});
+			} else {
+				swal("Datamu tidak terhapus");
+			}
+		});
+	}
+
+</script>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</center>
+</body>
+</div>
+</html>
